@@ -45,15 +45,20 @@ class mainRsa(QMainWindow):
         if int(self.main.inp_val_e.text()) > self.Fn:
             self.main.consolLable.setText("e должно быть меньше F(n)")
             return
-        self.main.consolLable.setText("Можете продолжать")
-        while True:
-            self.e = randint(1, 100)
-            if is_coprime(self.e, int(self.main.inp_val_p.text())) == False \
-                    or is_coprime(self.e, int(self.main.inp_val_q.text())) == False \
-                    or is_coprime(self.e, int(self.main.inp_val_e.text())) == False:
-                continue
+        if isPrime(int(self.main.inp_val_e.text())) == False:
+            self.main.consolLable.setText("e не простое число")
+            return
+        for i in range(1, 550):
+            if (i * int(self.main.inp_val_e.text())) % self.Fn == 1:
+                self.d = i
+                self.main.np_d_number.setText(str(self.d))
             else:
+                continue
+            if i == 99:
+                self.main.consolLable.setText("Значение d не было найденно")
                 break
+
+        self.main.consolLable.setText("Можете продолжать")
 
 
 if __name__ == "__main__":
