@@ -1,5 +1,4 @@
 from PyQt5.QtWidgets import QApplication, QMainWindow
-from random import randint
 from math import sqrt
 from itertools import count, islice
 from rsa_ui import *
@@ -15,9 +14,9 @@ def is_coprime(x, y):
     return math.gcd(x, y) == 1
 
 
-class mainRsa(QMainWindow):
+class MainRsa(QMainWindow):
     def __init__(self):
-        super(mainRsa, self).__init__()
+        super(MainRsa, self).__init__()
         self.main = Ui_RSA()
         self.main.setupUi(self)
         self.main.pnq_button.clicked.connect(self.validation)
@@ -63,5 +62,5 @@ class mainRsa(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = mainRsa()
+    window = MainRsa()
     sys.exit(app.exec_())
