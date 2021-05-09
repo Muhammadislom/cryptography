@@ -47,6 +47,7 @@ def encrypt(msg, q, h, g):
         en_msg[i] = s * ord(en_msg[i])
     return en_msg, p
 
+
 # Дешифрования
 def decrypt(en_msg, p, key, q):
     dr_msg = []
