@@ -39,7 +39,7 @@ class Factory:
                 self.x = (self.x ** 2 + 1) % self.n
                 self.y = ((self.y ** 2 + 1) ** 2 + 1) % self.n
 
-
+# Проверка
 n = int(input("n = "))
 test1 = Ferma()
 a1, b1 = test1.factorizeFerma(n)
