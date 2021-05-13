@@ -5,5 +5,6 @@ Various encryption algorithms for cryptography. Open source For educational purp
 2. Алгоритм Эльгамана
 3. Фактаризация
 4. Эллиптическая кривая
+5. Pohlig–Hellman
 
 [Releases](https://github.com/Muhammadislom/cryptography/releases/tag/%23cryptography)
