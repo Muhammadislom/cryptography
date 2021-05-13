@@ -100,16 +100,17 @@ def PohlingHellman(g, h, p):
     return x
 
 
-g = 7
-h = 23
-p = 41
+if __name__ == "__main__":
+    g = 7
+    h = 23
+    p = 41
 
-print("h=", h)
-print("g=", g)
-print("p=", p)
-print(("Solving %d = %d^x (mod %d)" % (h, g, p)))
+    print("h=", h)
+    print("g=", g)
+    print("p=", p)
+    print(("Solving %d = %d^x (mod %d)" % (h, g, p)))
 
-x = PohlingHellman(h, g, p)
-print("Solution x=", x)
+    x = PohlingHellman(h, g, p)
+    print("Solution x=", x)
 
-print("Checking h=", pow(int(g), int(x), int(p)))
+    print("Checking h=", pow(int(g), int(x), int(p)))
